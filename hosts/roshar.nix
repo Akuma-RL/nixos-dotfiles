@@ -8,7 +8,7 @@
   ../modules/system/fonts.nix
   ../modules/system/network.nix
   ../modules/system/sysPackages.nix
-  ../modules/system/gc.nix
+# ../modules/system/gc.nix
 
   ../modules/system/desktops/cinnamon.nix
 

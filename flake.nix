@@ -11,18 +11,30 @@
    lib = nixpkgs.lib;
    system = "x86_64-linux";
    pkgs = nixpkgs.legacyPackages.${system};
-  in
-  {
+#  overlay = [
+#   (final: prev: {
+#     brasero = null;
+#     dvdauthor = null;
+#    })
+#   ];
+  in {
    nixosConfigurations = {
-    roshar = lib.nixosSystem {
+    roshar = nixpkgs.lib.nixosSystem {
      inherit system;
-     modules = [ ./hosts/roshar.nix ];
+     modules = [
+     ./hosts/roshar.nix 
+#     {
+#      nixpkgs.overlays = overlay;
+#     }
+     ];
     };
    };
    homeConfigurations = {
     kaladin = home-manager.lib.homeManagerConfiguration {
      inherit pkgs;
-     modules = [ ./home/kaladin.nix ];
+     modules = [
+      ./home/kaladin.nix
+     ];
     };
    };
   };
