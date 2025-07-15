@@ -3,6 +3,8 @@
 {
  imports = [
   ../modules/hardware/fileSystems.nix
+  ../modules/hardware/mount.nix
+  ../modules/hardware/nas.nix
   ../modules/hardware/nvidia.nix
   
   ../modules/system/fonts.nix

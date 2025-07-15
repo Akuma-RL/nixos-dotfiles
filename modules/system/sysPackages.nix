@@ -7,6 +7,13 @@ boot.loader.efi.canTouchEfiVariables = true;
 
 time.timeZone = "America/Los_Angeles";
 
+ steam ={
+  enable = true;
+  remotePlay.openFirewall = false;
+  dedicatedServer.openFirewall = false;
+  localNetworkGameTransfers.openFirewall = false;
+ };
+
  environment.systemPackages = with pkgs; [
   btop
   git

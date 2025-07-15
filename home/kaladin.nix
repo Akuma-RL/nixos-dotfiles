@@ -18,7 +18,7 @@
   alacritty
   bat
   davinci-resolve-studio
-# darktable
+  darktable
   discord
   feh
   ffmpeg
